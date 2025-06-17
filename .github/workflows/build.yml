@@ -15,7 +15,7 @@ jobs:
            wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | sudo apt-key add -
            apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
            apt update
-           apt install cmake
+           apt -y install cmake 
       - name: Checkout
         uses: actions/checkout@v3
       - name: Cache west modules

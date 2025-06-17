@@ -11,11 +11,11 @@ jobs:
     steps:
       - name: Install CMake
         run: |
-           sudo apt remove --purge --auto-remove cmake
+           apt remove --purge --auto-remove cmake
            wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | sudo apt-key add -
-           sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
-           sudo apt update
-           sudo apt install cmake
+           apt-add-repository 'deb https://apt.kitware.com/ubuntu/ focal main'
+           apt update
+           apt install cmake
       - name: Checkout
         uses: actions/checkout@v3
       - name: Cache west modules
